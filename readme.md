@@ -40,7 +40,9 @@ Just drop  the MovementController in and it should work. So:
 
 ## Issues
 
-As long as you don't rotate the camera/player it works ok. But rotate the player and the horizontal movement sticks to the woprld axis, instead of the camera axis.
+See github issues.
+
+As long as you don't rotate the camera/player it works ok. But rotate the player and the horizontal movement sticks to the world axis, instead of the camera axis.
 
 ## credits
 
