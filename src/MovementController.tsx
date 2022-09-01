@@ -38,6 +38,11 @@ export default function MovementController({
             horizontal.copy(forward);
             horizontal.cross(camera.up).normalize();
 
+            player.rotation.y -=
+                (Math.abs(axesRight[rotationAxis]) > deadzone
+                    ? axesRight[rotationAxis]
+                    : 0) * rotationSensitivity;
+
             player.position.add(
                 horizontal.multiplyScalar(
                     (Math.abs(axesLeft[horizontalAxis]) > deadzone
@@ -52,10 +57,6 @@ export default function MovementController({
                         : 0) * forwardSensistivity
                 )
             );
-            player.rotation.y -=
-                (Math.abs(axesRight[rotationAxis]) > deadzone
-                    ? axesRight[rotationAxis]
-                    : 0) * rotationSensitivity;
         }
     });
     return <></>;
